@@ -1,0 +1,239 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+            border:1px solid #000000;
+        }
+        .style2
+        {
+            font-family: "Microsoft JhengHei UI";
+            font-size: xx-large;
+            background-color: #000066;
+        }
+        .style3
+        {
+            color: #FFFFFF;
+            background-color: #000066;
+        }
+        .style4
+        {
+            font-family: "Microsoft JhengHei UI";
+            font-weight: 700;
+        }
+        .style5
+        {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        .style6
+        {
+            font-family: "Microsoft JhengHei UI";
+            color: #000000;
+        }
+        .style7
+        {
+            font-family: "Microsoft JhengHei UI";
+            font-weight: bold;
+        }
+        .style8
+        {
+            width: 62px;
+        }
+        .style9
+        {
+            width: 59px;
+        }
+        .style10
+        {
+            width: 62px;
+            height: 34px;
+        }
+        .style11
+        {
+            font-family: "Microsoft JhengHei UI";
+            font-weight: bold;
+            height: 34px;
+        }
+        .style12
+        {
+            width: 254px;
+        }
+        .style13
+        {
+            text-decoration: underline;
+            font-family: "Microsoft JhengHei UI";
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+    <table align="center" class="style1">
+        <tr>
+            <td class="style2" colspan="2">
+                <strong><span class="style3">CIVIL REGISTRATION</span></strong></td>
+        </tr>
+        <tr>
+            <td class="style12">
+                <table align="right" class="style1">
+                    <tr>
+                        <td colspan="2">
+                            <asp:HyperLink ID="HyperLink1" runat="server" style="font-weight: 700" 
+                                ForeColor="Black" NavigateUrl="~/Admin/Home.aspx">Home Page</asp:HyperLink>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:HyperLink ID="HyperLink2" runat="server" style="font-weight: 700" 
+                                ForeColor="Black" NavigateUrl="~/Admin/Manage_Forms.aspx">Manage Forms</asp:HyperLink>
+                            <hr />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table class="style1">
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Image ID="Image1" runat="server" Height="40px" 
+                                            ImageUrl="~/Image/adhar.png" Width="50px" />
+                                    </td>
+                                    <td class="style7">
+                                        <asp:HyperLink ID="HyperLink3" runat="server" CssClass="style13" 
+                                            ForeColor="Black" NavigateUrl="~/Admin/Adhaarapprove.aspx">Adhaar Card</asp:HyperLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Image ID="Image2" runat="server" Height="40px" 
+                                            ImageUrl="~/Image/Birth_Certificate.png" Width="50px" />
+                                    </td>
+                                    <td class="style7">
+                                        <asp:HyperLink ID="HyperLink4" runat="server" CssClass="style13" 
+                                            NavigateUrl="~/Admin/Birthapprove.aspx">Birth Certificate</asp:HyperLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Image ID="Image3" runat="server" Height="30px" 
+                                            ImageUrl="~/Image/death.jpg" Width="50px" />
+                                    </td>
+                                    <td class="style7">
+                                        <asp:HyperLink ID="HyperLink5" runat="server" CssClass="style13" 
+                                            NavigateUrl="~/Admin/Deathapprove.aspx">Death Certificate</asp:HyperLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Image ID="Image4" runat="server" Height="30px" ImageUrl="~/Image/marr.png" 
+                                            Width="40px" />
+                                    </td>
+                                    <td class="style7">
+                                        <asp:HyperLink ID="HyperLink6" runat="server" CssClass="style13" 
+                                            NavigateUrl="~/Admin/Marriageapprove.aspx">Marriage Certificate</asp:HyperLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style10">
+                                        <asp:Image ID="Image5" runat="server" Height="40px" 
+                                            ImageUrl="~/Image/PAN-Card-for-a-Minor-Everything-You-Need-To-Know-thumbnail.png" 
+                                            Width="50px" />
+                                    </td>
+                                    <td class="style11">
+                                        <asp:HyperLink ID="HyperLink7" runat="server" CssClass="style13" 
+                                            NavigateUrl="~/Admin/Pancardapprove.aspx">Pan Card</asp:HyperLink>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="style8">
+                                        <asp:Image ID="Image6" runat="server" Height="40px" 
+                                            ImageUrl="~/Image/voter id.png" Width="50px" />
+                                    </td>
+                                    <td class="style5">
+                                        <asp:HyperLink ID="HyperLink8" runat="server" CssClass="style6" 
+                                            NavigateUrl="~/Admin/VoterIdapprove.aspx">Voter Card</asp:HyperLink>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9">
+                            <asp:Image ID="Image7" runat="server" Height="40px" ImageUrl="~/Image/pan2.png" 
+                                Width="50px" />
+                        </td>
+                        <td class="style5">
+                            <asp:HyperLink ID="HyperLink9" runat="server" CssClass="style4" 
+                                ForeColor="Black" NavigateUrl="~/Admin/Manage_Customer.aspx">Manage Customer</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9">
+                            <asp:Image ID="Image8" runat="server" Height="40px" ImageUrl="~/Image/pan2.png" 
+                                Width="50px" />
+                        </td>
+                        <td class="style5">
+                            <asp:HyperLink ID="HyperLink10" runat="server" CssClass="style4" 
+                                ForeColor="Black" NavigateUrl="~/Admin/View_Feedback.aspx">View Feedback</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9">
+                            <asp:Image ID="Image9" runat="server" Height="40px" ImageUrl="~/Image/pan2.png" 
+                                Width="50px" />
+                        </td>
+                        <td class="style5">
+                            <asp:HyperLink ID="HyperLink11" runat="server" CssClass="style4" 
+                                ForeColor="Black" NavigateUrl="~/Admin/Manage_admin.aspx">Manage Admin</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9">
+                            <asp:Image ID="Image10" runat="server" Height="40px" 
+                                ImageUrl="~/Image/pan2.png" Width="50px" />
+                        </td>
+                        <td class="style5">
+                            <asp:HyperLink ID="HyperLink12" runat="server" CssClass="style4" 
+                                ForeColor="Black" NavigateUrl="~/admin Report/AadharCard.aspx">Report</asp:HyperLink>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="style9">
+                            <asp:Image ID="Image11" runat="server" Height="40px" 
+                                ImageUrl="~/Image/pan2.png" Width="50px" />
+                        </td>
+                        <td class="style4">
+                            <asp:HyperLink ID="HyperLink13" runat="server" ForeColor="Black" 
+                                NavigateUrl="~/User/home.aspx">Logout</asp:HyperLink>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td class="style11" valign="top">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <asp:Panel ID="Panel1" runat="server" 
+                        BackImageUrl="~/Image/HD_Technologies_Banner5.jpg" Height="660px" 
+                        Width="1424px">
+                    </asp:Panel>
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="color: #FFFFFF; background-color: #000066">
+                <marquee>PROJECT BY MUSKAN & TAHIR</marquee></td>
+        </tr>
+    </table>
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Customer.master.cs" Inherits="Customer_Customer" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1">
+            <tr>
+                <td>
+                    <asp:Image ID="Image1" runat="server" Height="90px" 
+                        ImageUrl="~/Image/TAHIR (1).jpg" Width="400px" />
+                </td>
+                <td style="text-align: center; font-family: 'Times New Roman', Times, serif; font-size: xx-large; font-weight: 700;" 
+                align="center" class="style3" valign="middle">
+
+                    <strong><span class="style2">Welcome
+                    </span>
+                    <asp:Label ID="Label1" runat="server" CssClass="style2"></asp:Label>
+                    </strong>
+                </td>
+                
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:Menu ID="Menu1" runat="server" Height="35px" Orientation="Horizontal" 
+                        RenderingMode="Table" Width="100%" ForeColor="White" 
+                        style="color: #FFFFFF; background-color: #800000">
+                        <DynamicHoverStyle BackColor="Red" />
+                        <DynamicMenuItemStyle BackColor="#003366" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/User/home.aspx" Text="Home" Value="Home">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Edit Profile" 
+                                Value="Edit Profile" NavigateUrl="~/Customer/EditProfile.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Certificate" Value="Certificate">
+                                <asp:MenuItem NavigateUrl="~/Customer/AadharCard.aspx" Text="Aadhar Card" 
+                                    Value="Aadhar Card"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/birthcertificate.aspx" 
+                                    Text="birth certificate" Value="Birth certificate"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/DeathCertificate.aspx" 
+                                    Text="Death Certificate" Value="Death Certificate"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/MarriageCertificate.aspx" 
+                                    Text="Marriage Certificate" Value="Marriage Certificate"></asp:MenuItem>
+                                <asp:MenuItem Text="Pan Card" Value="Pan Card" 
+                                    NavigateUrl="~/Customer/PanCard.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Voter Id" Value="Voter Id" 
+                                    NavigateUrl="~/Customer/VoterIdCard.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Feedback" Value="Feedback" 
+                                NavigateUrl="~/Customer/Feedback.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Report" 
+                                Value="Report">
+                                <asp:MenuItem Text="Aadhaar Card" Value="Aadhaar Card" 
+                                    NavigateUrl="~/Customer/AadharReport.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/PancardReport.aspx" Text="PanCard" 
+                                    Value="PanCard"></asp:MenuItem>
+                                <asp:MenuItem Text="VoterId Card" Value="VoterId Card" 
+                                    NavigateUrl="~/Customer/VoterIdReport.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Birth Certificate" Value="Birth Certificate" 
+                                    NavigateUrl="~/Customer/BirthReport.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Customer/MarriageRepot.aspx" 
+                                    Text="Marriage Certificate" Value="Marriage Certificate"></asp:MenuItem>
+                                <asp:MenuItem Text="Death Certificate" Value="Death Certificate" 
+                                    NavigateUrl="~/Customer/DeathReport.aspx"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/User/home.aspx">
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="color: #FFFFFF">
+                    <marquee style="color: #FFFFFF; background-color: #800000; height:30px;  font-family: 'Microsoft JhengHei'; font-weight: 700;">PROJECT BY MUSKAN & TAHIR</marquee></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
