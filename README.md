@@ -158,4 +158,5 @@ This system simplifies the civil registration process by making it digital, effi
 ## 👨‍💻 Author
 
 **Tahir Mulani & Muskan Magdum**
+
 Final Year Project – Computer Science
