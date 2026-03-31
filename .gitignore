@@ -1,4 +1,6 @@
-App_Data
-data1
-Files
-Report
+bin/
+obj/
+*.user
+*.suo
+packages/
+.vs/
