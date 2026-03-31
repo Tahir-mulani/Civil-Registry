@@ -55,6 +55,7 @@ An online platform where users can:
 
 * ASP.NET Web Forms
 * HTML5
+* CSS3
 * JavaScript
 
 ### ⚙️ Backend
@@ -156,5 +157,5 @@ This system simplifies the civil registration process by making it digital, effi
 
 ## 👨‍💻 Author
 
-**Tahir Mulani**
+**Tahir Mulani & Muskan Magdum**
 Final Year Project – Computer Science
