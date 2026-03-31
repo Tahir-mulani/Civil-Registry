@@ -32,6 +32,7 @@
         .style5
         {
             height: 34px;
+            text-align:center;
         }
         
         .style6
@@ -223,9 +224,7 @@
         </td>
     </tr>
     <tr>
-        <td>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </td>
+        <td> </td>
         <td>
             &nbsp;</td>
         <td>
@@ -233,14 +232,12 @@
                 style="color: #FFFFFF; background-color: #003366" Text="Upload document" 
                 Width="200px" onclick="btnuploaddoc_Click" />
         </td>
-        <td colspan="2">
-&nbsp;&nbsp;
+        <td colspan="2"> 
         </td>
     </tr>
     <tr>
-        <td class="style5" colspan="3">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnsavenext" runat="server" ForeColor="White" Height="30px" 
+        <td class="style5" colspan="3"> 
+        <asp:Button ID="btnsavenext" runat="server" ForeColor="White" Height="30px" 
                 style="background-color: #003366" Text="Save &amp; Next" Width="200px" 
                 onclick="btnsave_Click" />
         </td>

@@ -54,7 +54,7 @@
             <td>
                 Email:</td>
             <td>
-                <asp:TextBox ID="txtemail" runat="server" Height="30px" Width="180px"></asp:TextBox>
+                <asp:TextBox ID="txtemail" runat="server" Height="30px" Width="180px"  ></asp:TextBox>
             </td>
             <td>
                 <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 

@@ -20,6 +20,21 @@
             color: #000000;
             background-color: #FFFFFF;
         }
+        .style4
+        {
+            height: 34px;
+            width: 296px;
+            text-align:center;
+        }
+        .style5
+        {
+            width: 296px;
+            text-align:center;
+        }
+        .style6
+        {
+            text-align : center;
+        }
     </style>
 </head>
 <body>
@@ -35,14 +50,14 @@
             </td>
         </tr>
         <tr>
-            <td class="style2">
+            <td class="style4">
                 Username:</td>
             <td class="style2">
                 <asp:TextBox ID="txtusername" runat="server" Height="30px" Width="200px"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="style5">
                 Password:</td>
             <td>
                 <asp:TextBox ID="txtpassword" runat="server" Height="30px" TextMode="Password" 
@@ -50,12 +65,12 @@
             </td>
         </tr>
         <tr>
-            <td>
+            <td class="style6">
                 <asp:Button ID="btnlogin" runat="server" Height="30px" onclick="btnlogin_Click" 
                     Text="Login" Width="180px" BackColor="#3399FF" ForeColor="White" 
                     style="background-color: #003366" />
             </td>
-            <td>
+            <td class="style6">
                 <asp:Button ID="btncancel" runat="server" Height="30px" 
                     onclick="btncancel_Click" Text="Cancel" Width="180px" BackColor="#3399FF" 
                     ForeColor="White" style="background-color: #003366" />

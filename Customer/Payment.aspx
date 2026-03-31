@@ -135,8 +135,8 @@
     <tr>
         <td colspan="2" style="text-align: center">
             <asp:Button ID="btnmakepay" runat="server" Height="30px" 
-                style="color: #FFFFFF; background-color: #000066" Text="Make Payment" 
-                Width="150px" onclick="btnmakepay_Click" />
+                style="color: #FFFFFF; background-color: #000066;" Text="Make Payment" 
+                Width="150px" onclick="btnmakepay_Click"  />
         </td>
     </tr>
 </table>

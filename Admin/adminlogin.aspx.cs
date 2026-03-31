@@ -17,6 +17,7 @@ public partial class Admin_adminlogin : System.Web.UI.Page
     {
            
     }
+    /*
     protected void btnlogin_Click(object sender, EventArgs e)
     {
         cn.Open();
@@ -34,6 +35,36 @@ public partial class Admin_adminlogin : System.Web.UI.Page
             ClientScript.RegisterStartupScript(Page.GetType(), "login", "<script language='javascript'>alert('Invalid login...!!!')</script>");
         }
 
+    }*/
+    protected void btnlogin_Click(object sender, EventArgs e)
+    {
+        cn.Open();
+
+        string query = "select * from admin where username=@uname and password=@pass";
+        SqlCommand cmd = new SqlCommand(query, cn);
+
+        cmd.Parameters.AddWithValue("@uname", txtusername.Text);
+        cmd.Parameters.AddWithValue("@pass", txtpassword.Text);
+
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+
+        if (dt.Rows.Count > 0)
+        {
+            // Store session
+            Session["admin"] = txtusername.Text;
+
+            // Redirect to Admin Home Page
+            Response.Redirect("Home.aspx");   // your admin home page
+        }
+        else
+        {
+            ClientScript.RegisterStartupScript(Page.GetType(), "login",
+            "<script>alert('Invalid login...!!!')</script>");
+        }
+
+        cn.Close();
     }
     protected void btncancel_Click(object sender, EventArgs e)
     {
