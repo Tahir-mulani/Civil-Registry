@@ -31,7 +31,7 @@ Traditionally, citizens need to visit government offices multiple times and foll
 
 An online platform where users can:
 
-* Apply for certificates (Birth, Death, Marriage, etc.)
+* Apply for certificates (Birth, Death, Marriage Aadhar Card, PAN Card, Voter ID Card etc.)
 * Access information about required documents
 * Submit queries and feedback
 * Track and manage applications
