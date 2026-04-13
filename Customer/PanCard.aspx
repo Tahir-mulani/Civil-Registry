@@ -15,6 +15,10 @@
         {
             width: 220px;
         }
+        .style7
+        {
+            color: White;
+        }
     </style>
 </asp:Content>
 
@@ -22,9 +26,16 @@
     contentplaceholderid="ContentPlaceHolder1">
     <table align="center" class="style2">
         <tr>
-            <td class="style3" colspan="5" style="text-align: center">
-                Application Form For PanCard</td>
-        </tr>
+        <td class="style3" colspan="6">
+
+            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg" 
+                style="text-align: left" >
+                <span class="style6"><strong><span class="style7">Application Form for PanCard</span> </strong></span>
+                           
+            </asp:Panel>
+            <hr />
+        </td>
+    </tr>
         <tr>
             <td>
                 Pan Registration id:</td>

@@ -45,10 +45,9 @@
             <td class="style7">
                 <asp:TextBox ID="txtname" runat="server" Height="30px" Width="180px"></asp:TextBox>
             </td>
-            <td class="style7">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                    ControlToValidate="txtname" ErrorMessage="*"></asp:RequiredFieldValidator>
-            </td>
+            <td class="style7"><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="txtregid" ErrorMessage="Name Should not Empty" ForeColor="Red"></asp:RequiredFieldValidator>
+</td>
         </tr>
         <tr>
             <td>

@@ -33,40 +33,7 @@
 		<a href="#" title=""><span><img src="../data1/tooltips/n.jpg" alt=""/></span></a>
 		<a href="#" title=""><span><img src="../data1/tooltips/dc_1500x500.jpg" alt=""/></span></a>
 	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">bootstrap slider</a> by WOWSlider.com v8.7</div>
-	<div class="ws_shadow">
-        <table class="style1">
-            <tr>
-                <td>
-                    <asp:HyperLink ID="HyperLink3" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/aboutus.aspx">About Us</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink4" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Adharcardregestration.aspx">Aadhaar Card</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink5" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Panregestration.aspx">Pan Card</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink6" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Registrationofbirth.aspx">Birth Certificate</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink7" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Marriagecertificate.aspx">Marriage Certificate</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink8" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Registrationdeath.aspx">Death Certificate</asp:HyperLink>
-                </td>
-                <td>
-                    <asp:HyperLink ID="HyperLink9" runat="server" ForeColor="Black" 
-                        NavigateUrl="~/User/Voteridcard.aspx">Voter ID Card</asp:HyperLink>
-                </td>
-            </tr>
-        </table>
-        </div>
+	 
 	</div>	
 	<script type="text/javascript" src="../engine1/wowslider.js"></script>
 	<script type="text/javascript" src="../engine1/script.js"></script>

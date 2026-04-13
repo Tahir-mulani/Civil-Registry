@@ -13,6 +13,11 @@ public partial class User_enquiry : System.Web.UI.Page
     SqlCommand cmd = new SqlCommand();
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session["user"] == null)
+        {
+            Response.Redirect("~/User/Customerlogin.aspx");
+            return;
+        }
         string nm = Session["user"].ToString();
         cn.Open();
         cmd.CommandText = "select name from Registrationform where username = '" + nm + "'";

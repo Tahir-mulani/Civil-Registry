@@ -4,16 +4,19 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-    .style2
-    {
-        text-align: center;
-    }
-</style>
+ 
+        .style4
+        {
+            text-align: center;
+            
+        }
+      
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="style1">
+    <table class="style1" style="margin-bottom: 0px">
     <tr>
-        <td class="style2">
+        <td class="style4">
             <asp:Label ID="lblstatus" runat="server" ForeColor="Red">Approval Pending</asp:Label>
             <br />
             <asp:Label ID="lblanapp" runat="server" ForeColor="Red" Text="Not Applied"></asp:Label>
@@ -27,7 +30,7 @@
         </td>
     </tr>
     <tr>
-        <td class="style2">
+        <td class="style5">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CR:CrystalReportViewer ID="CrystalReportViewer1" 
                 runat="server" AutoDataBind="true" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

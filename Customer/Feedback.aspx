@@ -4,7 +4,7 @@
     <style type="text/css">
         .style2
         {
-            width: 60%;
+            width: 50%;
         }
         .style3
         {

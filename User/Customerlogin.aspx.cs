@@ -20,21 +20,29 @@ public partial class User_Customerlogin : System.Web.UI.Page
     protected void btnlogin_Click(object sender, EventArgs e)
     {
         cn.Open();
-        cmd.CommandText = "Select*from registrationform where username='" + txtusername.Text + "'and password='" + txtpassword.Text + "'";
+
+        cmd.CommandText = "SELECT * FROM registrationform WHERE username=@u AND password=@p";
+        cmd.Parameters.Clear();
+        cmd.Parameters.AddWithValue("@u", txtusername.Text);
+        cmd.Parameters.AddWithValue("@p", txtpassword.Text);
         cmd.Connection = cn;
-        cmd.ExecuteNonQuery();
+
         da.SelectCommand = cmd;
+        dt.Clear();
         da.Fill(dt);
-        if(dt.Rows.Count>0)
+
+        if (dt.Rows.Count > 0)
         {
-            Session["username"] =txtusername.Text;
+            Session["username"] = txtusername.Text; // ✅ FIXED
             Response.Redirect("~/Customer/Home.aspx");
-  
         }
         else
         {
-            ClientScript.RegisterStartupScript(Page.GetType(),"Login","<script language='javascript'>alert('Invalid Login...!!!')</script");
+            ClientScript.RegisterStartupScript(Page.GetType(), "Login",
+                "<script>alert('Invalid Login...!!!')</script>");
         }
+
+        cn.Close();
     }
     protected void btncancel_Click(object sender, EventArgs e)
     {

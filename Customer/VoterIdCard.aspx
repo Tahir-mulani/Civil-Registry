@@ -6,16 +6,26 @@
     {
         width: 80%;
     }
+    .style7
+    {
+        color:White;
+    }
 </style>
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" 
     contentplaceholderid="ContentPlaceHolder1">
     <table align="center" cellpadding="2" class="style2">
-    <tr>
-        <td colspan="5" 
-            style="text-align: center; font-family: 'Microsoft JhengHei'; font-size: x-large">
-            Application Form For Voter ID</td>
+  <tr>
+        <td class="style3" colspan="6">
+
+            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg" 
+                style="text-align: left" >
+                <span class="style6"><strong><span class="style7">Application For VoterId Card</span> </strong></span>
+                           
+            </asp:Panel>
+            <hr />
+        </td>
     </tr>
     <tr>
         <td>

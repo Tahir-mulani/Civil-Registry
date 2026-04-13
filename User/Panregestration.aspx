@@ -29,7 +29,7 @@
             <td>
                 <ul>
                     <li>Voter ID card </li>
-                    <li>Password </li>
+                    <li>Passport</li>
                     <li>Aadhaar Card Driving License, Domicile</li>
                     <li>&nbsp;A certificate issued by a bank that should be only. counting applicants 
                         photo and the bank a/c number.</li>
@@ -49,7 +49,7 @@
             <td>
                 <ul>
                     <li>Electricity bills..</li>
-                    <li>&nbsp;password. </li>
+                    <li>&nbsp;Passport</li>
                     <li>Statements of Bank Account.</li>
                     <li>&nbsp;Latest order for property tax document. </li>
                     <li>property Registration Document. </li>

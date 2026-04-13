@@ -23,40 +23,59 @@ public partial class Customer_DeathReport : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        CrystalReportViewer1.Visible = false;
-        btngenerate.Visible = false;
-        lblnoapp.Visible = false;
-        lblstatus.Visible = false;
-        string name = Session["user"].ToString();
-        //lblstatus.Text =name;
-        cn.Close();
-        cn.Open();
-        cmd.CommandText = "Select status from Deathcertificate where name ='" + name + "'";
-        cmd.Connection = cn;
-        s1 = cmd.ExecuteScalar().ToString();
-        cn.Close();
-       // ClientScript.RegisterStartupScript(Page.GetType(), "save", "<Script language='javascript'>alert('"+s1+"')</Script>");
-        cn.Close();
-        string type = "Death Certificate";
-        cn.Open();
-        cmd.CommandText = "Select applid from ApproveCertificate where applname ='" + name + "' and type ='" + type + "'";
-        cmd.Connection = cn;
-        AID = Convert.ToInt32(cmd.ExecuteScalar());
-        cn.Close();
+        if (!IsPostBack)
+        {
+            CrystalReportViewer1.Visible = false;
+            btngenerate.Visible = false;
+            lblnoapp.Visible = false;
+            lblstatus.Visible = false;
 
-        if (s1 == "Approve")
-        {
-            btngenerate.Visible = true;
-        }
-        else if (AID != 0)
-        {
-            lblstatus.Visible = true;
-        }
-        else
-        {
-            lblnoapp.Visible = true;
-        }
+            if (Session["user"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
 
+            string name = Session["user"].ToString();
+            string type = "Death Certificate";
+
+            cn.Open();
+
+            // Get Status
+            cmd.CommandText = "SELECT status FROM Deathcertificate WHERE name = @name";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Connection = cn;
+
+            object result = cmd.ExecuteScalar();
+            s1 = result != null ? result.ToString() : "";
+
+            cn.Close();
+
+            // Get AID
+            cn.Open();
+            cmd.CommandText = "SELECT applid FROM ApproveCertificate WHERE applname = @name AND type = @type";
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@type", type);
+
+            object result2 = cmd.ExecuteScalar();
+            AID = result2 != null ? Convert.ToInt32(result2) : 0;
+
+            cn.Close();
+
+            if (s1 == "Approve")
+            {
+                btngenerate.Visible = true;
+            }
+            else if (AID != 0)
+            {
+                lblstatus.Visible = true;
+            }
+            else
+            {
+                lblnoapp.Visible = true;
+            }
+        }
     }
     protected void btngenerate_Click(object sender, EventArgs e)
     {

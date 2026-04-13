@@ -20,8 +20,9 @@
         {
             width: 221px;
         }
-        .style6
+        .style7
         {
+            color:White;
         }
     </style>
 </asp:Content>
@@ -30,10 +31,17 @@
     contentplaceholderid="ContentPlaceHolder1">
     <table align="center" cellpadding="2" class="style2">
         <tr>
-            <td class="style3" colspan="4">
-                <strong>Application for Marriage Certificate<hr />
-                </strong></td>
-        </tr>
+        <td class="style3" colspan="6">
+
+            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg" 
+                style="text-align: left" >
+                <span class="style6"><strong><span class="style7">Application Form for Marriage 
+                Certificate</span> </strong></span>
+                           
+            </asp:Panel>
+            <hr />
+        </td>
+    </tr>
         <tr>
             <td class="style6">
                 Marriage Registration ID:</td>

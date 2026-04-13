@@ -70,18 +70,28 @@
         {
             height: 39px;
         }
+        .style7
+        {
+            color: White;
+        }
     </style>
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" 
     contentplaceholderid="ContentPlaceHolder1">
     <table align="center" class="style2">
-        <tr>
-            <td colspan="6" 
-                style="text-align: center; font-size: x-large; font-family: 'Microsoft JhengHei'">
-                <strong>Application Form for Death certificate</strong><hr />
-            </td>
-        </tr>
+       <tr>
+        <td class="style3" colspan="6">
+
+            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg" 
+                style="text-align: left" >
+                <span class="style6"><strong><span class="style7">Application Form for Death 
+                Certificate</span> </strong></span>
+                           
+            </asp:Panel>
+            <hr />
+        </td>
+    </tr>
         <tr>
             <td class="style4">
                 Death Registration id:</td>
