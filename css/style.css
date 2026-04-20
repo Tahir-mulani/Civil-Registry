@@ -1,0 +1,115 @@
+﻿/* ===== GLOBAL STYLING ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #b30000;
+    margin-bottom: 20px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    background: #ffffff;
+}
+
+.services .service-box {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 25px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor:pointer;
+}
+
+.services .service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== ABOUT ===== */
+.about {
+    background: #fafafa;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 16px;
+}
+
+/* ===== PROCESS ===== */
+.process ol {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* ===== STATS ===== */
+.stats {
+    
+     background:#007bff;
+}
+
+.stat-box {
+    display: inline-block;
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+    border: 1px solid black;
+    padding:10px 20px;
+   
+    
+}
+
+/* ===== NEWS ===== */
+.news ul {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+    background: #fafafa;
+}
+
+.testimonials p {
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* ===== CONTACT ===== */
+.contact p {
+    margin: 5px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #b30000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ===== RESPONSIVE (MOBILE) ===== */
+@media (max-width: 768px) {
+    .service-box {
+        width: 90%;
+    }
+
+    .stat-box {
+        display: block;
+    }
+}

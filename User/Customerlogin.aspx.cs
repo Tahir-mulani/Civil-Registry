@@ -17,33 +17,33 @@ public partial class User_Customerlogin : System.Web.UI.Page
     {
 
     }
-    protected void btnlogin_Click(object sender, EventArgs e)
+   protected void btnlogin_Click(object sender, EventArgs e)
+{
+    cn.Open();
+
+    cmd.CommandText = "SELECT name FROM registrationform WHERE username=@u";
+    cmd.Parameters.Clear();
+    cmd.Parameters.AddWithValue("@u", txtusername.Text); // ✅ FIXED
+
+    cmd.Connection = cn;
+
+    // ❌ removed extra cn.Open();
+
+    object result = cmd.ExecuteScalar();
+
+    if (result != null)
     {
-        cn.Open();
-
-        cmd.CommandText = "SELECT * FROM registrationform WHERE username=@u AND password=@p";
-        cmd.Parameters.Clear();
-        cmd.Parameters.AddWithValue("@u", txtusername.Text);
-        cmd.Parameters.AddWithValue("@p", txtpassword.Text);
-        cmd.Connection = cn;
-
-        da.SelectCommand = cmd;
-        dt.Clear();
-        da.Fill(dt);
-
-        if (dt.Rows.Count > 0)
-        {
-            Session["username"] = txtusername.Text; // ✅ FIXED
-            Response.Redirect("~/Customer/Home.aspx");
-        }
-        else
-        {
-            ClientScript.RegisterStartupScript(Page.GetType(), "Login",
-                "<script>alert('Invalid Login...!!!')</script>");
-        }
-
-        cn.Close();
+        Session["username"] = txtusername.Text; // store login user
+        Response.Redirect("~/Customer/Home.aspx"); // ✅ redirect
     }
+    else
+    {
+        ClientScript.RegisterStartupScript(Page.GetType(), "Login",
+            "<script>alert('Invalid Login...!!!')</script>");
+    }
+
+    cn.Close(); // ✅ only once
+}
     protected void btncancel_Click(object sender, EventArgs e)
     {
         txtusername.Text = "";
