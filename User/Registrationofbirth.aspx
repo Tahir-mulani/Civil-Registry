@@ -1,63 +1,33 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Registrationofbirth.aspx.cs" Inherits="User_Registrationofbirth" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Registrationofbirth.aspx.cs" Inherits="User_Registrationofbirth" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center" class="style2" width="80%">
-        <tr>
-            <td colspan="2" style="font-size: x-large; text-align: center">
-                <strong>REGISTERING A BIRTH
-                <hr />
-                </strong>
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="6">
-                <asp:Image ID="Image5" runat="server" Height="200px" 
-                    ImageUrl="~/Image/Birth_Certificate.png" Width="300px" />
-            </td>
-            <td>
-                <ul>
-                    <li>To obtain a birth certificate. The birth must be registered with the concerned 
-                        proof authorities within 21 days from date of occurrence. </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>In case of birth has taken place in hospital or nursing homes or medical 
-                        institution. such has to be reported by the institutions. </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td style="font-weight: 700; text-decoration: underline">
-                DOCUMENTS REQUIRED</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Following documents needs to be for getting Maharashtra birth certificate.
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Identify proof of the parents for verification[Aadhar Card] </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Letter from hospital-proof of birth of child issued by the hospital where child 
-                        is born. </li>
-                </ul>
-            </td>
-        </tr>
-    </table>
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="content-card" style="max-width: 900px; margin: 30px auto;">
+        <div class="form-header">
+            <h2>Birth Certificate Registration Guidelines</h2>
+            <p style="color: #64748b; margin-top: 4px;">Important information regarding statutory birth registration and required documents</p>
+        </div>
 
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start;">
+            <div style="flex: 1; min-width: 260px; text-align: center;">
+                <asp:Image ID="Image5" runat="server" Height="220px" 
+                    ImageUrl="~/Image/Birth_Certificate.png" Width="100%" style="object-fit: contain; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; background: #fafafa;" />
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #0f2942; margin-bottom: 12px;">Registration Overview</h3>
+                <ul style="line-height: 1.8; color: #334155; margin-bottom: 24px; padding-left: 20px;">
+                    <li>Birth must be registered with concerned local registrar authorities within <strong>21 days</strong> of occurrence.</li>
+                    <li>In case of births occurring in hospitals or medical institutions, official reporting is initiated directly by the medical facility.</li>
+                </ul>
+
+                <h3 style="color: #0f2942; margin-bottom: 12px; border-top: 1px solid #e2e8f0; padding-top: 16px;">Required Supporting Documents</h3>
+                <ul style="line-height: 1.8; color: #334155; padding-left: 20px;">
+                    <li>Official Identity Proof of parents (e.g. Aadhaar Card / Voter ID).</li>
+                    <li>Hospital Discharge Certificate / Discharge Summary letter proving child birth.</li>
+                    <li>Parents' Marriage Registration Proof (if applicable).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</asp:Content>

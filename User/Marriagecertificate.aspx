@@ -1,80 +1,47 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Marriagecertificate.aspx.cs" Inherits="User_Marriagecertificate" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Marriagecertificate.aspx.cs" Inherits="User_Marriagecertificate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .style5
-        {
-            font-size: x-large;
-            text-align: center;
-        }
-        .style6
-        {
-            height: 79px;
-        }
-    </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center" class="style2">
-        <tr>
-            <td class="style5" colspan="2">
-                <strong>MARRIAGE REGISTRATION<hr />
-                </strong></td>
-        </tr>
-        <tr>
-            <td rowspan="3">
-                <asp:Image ID="Image5" runat="server" 
-                    ImageUrl="~/Image/Marriage-License-512.png" Width="300px" />
-            </td>
-            <td class="style6">
-                The party should apply to the office of the inspector General of Registration 
-                under whose condition the marriage occurred or where the sources had stayed for 
-                at least the months before the wedding. To register, any one of the following 
-                places should come under the condition of the Registering Officer. 
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Residence of the bridegroom&nbsp;</li>
-                    <li>Residence of the bride </li>
-                    <li>Solemnization place </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                In India, a marriage can be recorded under either the special Marriage Act at 
-                Hindu Marriage Act. The special Marriage act applies to all cast of Indian 
-                respective of their religion. Whereas Two Hindu Marriage Act applies only to 
-                Hindus. the special Marriage Act provides for the solemnization of a marriage as 
-                well as registration of an already solemnized marriage and does not fit 
-                solemnization of a marriage and does not fit solemnization of
-                <br />
-               a marriage by a marriage Register
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="2">
-                <asp:Image ID="Image6" runat="server" 
-                    ImageUrl="~/Image/marr.png" Width="300px" />
-            </td>
-            <td style="font-weight: 700; text-decoration: underline">
-                DOCUMENTS REQUIREDD</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Aapplication form </li>
-                    <li>Affidavit of the couple is needed in which the place of marriage occurred 
-                        including the details of marriage date,marital status and nationality.</li>
-                    <li>Passport size photo and photograph of a marriage invitation card, if any.
-                    </li>
-                    <li>Residency proof of the Applicant.</li>
-                    <li>Aadhaar Card of the groom[Age proof] </li>
-                    <li>Aadhaar Card of the [Age proof]</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
 </asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="content-card" style="max-width: 900px; margin: 30px auto;">
+        <div class="form-header">
+            <h2>Marriage Certificate Registration Guidelines</h2>
+            <p style="color: #64748b; margin-top: 4px;">Legal jurisdiction, Acts applicability, and required supporting documents</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; margin-bottom: 32px;">
+            <div style="flex: 1; min-width: 240px; text-align: center;">
+                <asp:Image ID="Image5" runat="server" Height="180px" 
+                    ImageUrl="~/Image/Marriage-License-512.png" Width="100%" style="object-fit: contain; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; background: #fafafa;" />
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #0f2942; margin-bottom: 12px;">Jurisdiction &amp; Applicable Acts</h3>
+                <p style="line-height: 1.7; color: #334155; margin-bottom: 12px;">
+                    Applications must be submitted under the Inspector General of Registration jurisdiction covering any of the following locations:
+                </p>
+                <ul style="line-height: 1.8; color: #334155; padding-left: 20px;">
+                    <li>Permanent residence of the bridegroom.</li>
+                    <li>Permanent residence of the bride.</li>
+                    <li>Location of solemnization of marriage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; border-top: 1px solid #e2e8f0; padding-top: 24px;">
+            <div style="flex: 1; min-width: 240px; text-align: center;">
+                <asp:Image ID="Image6" runat="server" Height="180px" 
+                    ImageUrl="~/Image/marr.png" Width="100%" style="object-fit: contain; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; background: #fafafa;" />
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #0f2942; margin-bottom: 12px;">Required Supporting Documents</h3>
+                <ul style="line-height: 1.8; color: #334155; padding-left: 20px;">
+                    <li>Duly completed Marriage Application Form.</li>
+                    <li>Joint affidavit specifying marriage date, place, marital status, and nationality.</li>
+                    <li>Passport size photographs of bride &amp; groom and Wedding Invitation card.</li>
+                    <li>Residency proof of applicants and age proof (Aadhaar Cards).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</asp:Content>

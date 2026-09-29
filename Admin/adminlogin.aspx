@@ -1,82 +1,37 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="adminlogin.aspx.cs" Inherits="Admin_adminlogin" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="adminlogin.aspx.cs" Inherits="Admin_adminlogin" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-   <title></title>
-    <style type="text/css">
-        .style1
-        {
-            width: 60%;
-            
-        }
-        .style2
-        {
-            height: 34px;
-        }
-        .style3
-        {
-            color: #000000;
-            background-color: #FFFFFF;
-        }
-        .style4
-        {
-            height: 34px;
-            width: 296px;
-            text-align:center;
-        }
-        .style5
-        {
-            width: 296px;
-            text-align:center;
-        }
-        .style6
-        {
-            text-align : center;
-        }
-    </style>
+    <title>Civil Registry - Admin Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../css/style.css" rel="stylesheet" />
 </head>
-<body>
-  <form id="form1" runat="server">
-    <table align="center" class="style1">
-        <tr>
-            <td colspan="2" 
-                style="text-align: center; font-family: 'Microsoft JhengHei'; font-weight: 700; font-size: x-large;" 
-                class="style3">
-                <asp:Image ID="Image1" runat="server" />
-                <br />
-                Admin Login<hr />
-            </td>
-        </tr>
-        <tr>
-            <td class="style4">
-                Username:</td>
-            <td class="style2">
-                <asp:TextBox ID="txtusername" runat="server" Height="30px" Width="200px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style5">
-                Password:</td>
-            <td>
-                <asp:TextBox ID="txtpassword" runat="server" Height="30px" TextMode="Password" 
-                    Width="200px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style6">
-                <asp:Button ID="btnlogin" runat="server" Height="30px" onclick="btnlogin_Click" 
-                    Text="Login" Width="180px" BackColor="#3399FF" ForeColor="White" 
-                    style="background-color: #003366" />
-            </td>
-            <td class="style6">
-                <asp:Button ID="btncancel" runat="server" Height="30px" 
-                    onclick="btncancel_Click" Text="Cancel" Width="180px" BackColor="#3399FF" 
-                    ForeColor="White" style="background-color: #003366" />
-            </td>
-        </tr>
-    </table>
+<body style="background: linear-gradient(135deg, #0f2942 0%, #1b365d 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;">
+    <form id="form1" runat="server" style="width: 100%; max-width: 440px;">
+        <div class="form-card" style="margin: 0; padding: 36px 28px; background: #ffffff; border-radius: 12px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3);">
+            <div class="form-header" style="text-align: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 20px; margin-bottom: 24px;">
+                <asp:Image ID="Image1" runat="server" Visible="false" />
+                <h2 style="color: #0f2942; font-size: 1.6rem; margin: 0;">Admin Portal Sign In</h2>
+                <p style="color: #64748b; font-size: 0.88rem; margin: 6px 0 0 0;">Authorized System Administrators Only</p>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 18px;">
+                <label class="form-label">Username:</label>
+                <asp:TextBox ID="txtusername" runat="server" CssClass="form-control" placeholder="Admin Username"></asp:TextBox>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 24px;">
+                <label class="form-label">Password:</label>
+                <asp:TextBox ID="txtpassword" runat="server" TextMode="Password" CssClass="form-control" placeholder="Admin Password"></asp:TextBox>
+            </div>
+
+            <div class="form-actions" style="display: flex; gap: 12px;">
+                <asp:Button ID="btnlogin" runat="server" onclick="btnlogin_Click" Text="Login" CssClass="btn btn-primary" style="flex: 1;" />
+                <asp:Button ID="btncancel" runat="server" onclick="btncancel_Click" Text="Cancel" CssClass="btn btn-secondary" style="flex: 1;" />
+            </div>
+        </div>
     </form>
 </body>
 </html>

@@ -1,74 +1,36 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Registrationdeath.aspx.cs" Inherits="User_Registrationdeath" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="Registrationdeath.aspx.cs" Inherits="User_Registrationdeath" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .style5
-        {
-            font-size: x-large;
-        }
-        .style6
-        {
-            text-align: center;
-        }
-        .style7
-        {
-            text-decoration: underline;
-        }
-    </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center" class="style2">
-        <tr>
-            <td class="style6" colspan="2">
-                <span class="style5"><strong>REGISTRATION DEATH</strong></span>&nbsp;<hr />
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="5">
-                <asp:Image ID="Image5" runat="server" 
-                    ImageUrl="~/Image/death certificate.png" Width="300px" />
-            </td>
-            <td>
-                Every death in Maharashtra needs to be registered in the concern Register Office 
-                in order to obtain death certificate persons responsible for registering a death 
-                is listed below. 
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>In case death in a house of the family is responsible for registering death.
-                    </li>
-                    <li>The medical in-charge need to register, if the death in a hospital or medical 
-                        institution. </li>
-                    <li>Jailer in-charge is responsible for registration, if a death occurs in a jail.
-                    </li>
-                    <li>If a new-born child or baby is founded deserted in an area, header man of that 
-                        area or local ploice station in-charge can register the death. </li>
-                    <li>In case of death occurs in a plantation the superintendent of the plantation can 
-                        register. </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td class="style7">
-                <strong>DOCUMENT REQUIRED</strong></td>
-        </tr>
-        <tr>
-            <td>
-                Following document need to be submitted at the time of completing death 
-                registration in Maharashtra</td>
-        </tr>
-        <tr>
-            <td>
-                <ul>
-                    <li>Declaration by close relative or family member in prescribe format. </li>
-                    <li>Application form Address proof of decreased(Voter ID 
-                        card,electrically,gas,water,telephone bill passport,valid ration card,Aadhar 
-                        card,Name of the decreased)</li>
-                </ul>
-            </td>
-        </tr>
-    </table>
 </asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="content-card" style="max-width: 900px; margin: 30px auto;">
+        <div class="form-header">
+            <h2>Death Certificate Registration Guidelines</h2>
+            <p style="color: #64748b; margin-top: 4px;">Statutory procedures, responsible authorities, and required proof documents</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start;">
+            <div style="flex: 1; min-width: 260px; text-align: center;">
+                <asp:Image ID="Image5" runat="server" Height="220px" 
+                    ImageUrl="~/Image/death certificate.png" Width="100%" style="object-fit: contain; border-radius: 8px; border: 1px solid #e2e8f0; padding: 12px; background: #fafafa;" />
+            </div>
+            <div style="flex: 2; min-width: 300px;">
+                <h3 style="color: #0f2942; margin-bottom: 12px;">Responsibility for Death Registration</h3>
+                <ul style="line-height: 1.8; color: #334155; margin-bottom: 24px; padding-left: 20px;">
+                    <li><strong>Domestic Occurrence:</strong> Head of the family or close relative.</li>
+                    <li><strong>Hospital / Nursing Home:</strong> Medical officer in-charge of the institution.</li>
+                    <li><strong>Institutional Facility (Jail / Plantation):</strong> In-charge superintendent or jailer.</li>
+                    <li><strong>Unclaimed / Found Cases:</strong> Local police station officer in-charge.</li>
+                </ul>
+
+                <h3 style="color: #0f2942; margin-bottom: 12px; border-top: 1px solid #e2e8f0; padding-top: 16px;">Required Supporting Documents</h3>
+                <ul style="line-height: 1.8; color: #334155; padding-left: 20px;">
+                    <li>Declaration by close relative or family member in prescribed statutory format.</li>
+                    <li>Deceased Address &amp; Identity Proof (Voter ID, Utility Bill, Ration Card, or Aadhaar Card).</li>
+                    <li>Medical Cause of Death Certificate from attending doctor (if applicable).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</asp:Content>

@@ -1,257 +1,205 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="birthcertificate.aspx.cs" Inherits="Customer_birthcertificate" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="birthcertificate.aspx.cs" Inherits="Customer_birthcertificate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-    .style2
-    {
-        width: 80%;
-    }
-        .style3
-        {
-            font-family: "Microsoft JhengHei";
-            font-size: x-large;
-            text-align: center;
-        }
-        .style4
-        {
-            height: 29px;
-        }
-        .style5
-        {
-            color: #FFFFFF;
-        }
-    </style>
 </asp:Content>
 
-<asp:Content ID="Content2" runat="server" 
-    contentplaceholderid="ContentPlaceHolder1">
-    <table align="center" class="style2">
-    <tr>
-        <td colspan="6" class="style3">
-            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg"
-                style="text-align: left"><span class="style5"><strong>Application Form for Birth 
-                Certificate</strong></span> </asp:Panel>
-                <hr />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Birth<br />
-            Registration Id:</td>
-        <td>
-            <asp:TextBox ID="txtbirthregid" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Date of Registration:</td>
-        <td>
-            <asp:TextBox ID="txtdteofreg" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Informer Name:</td>
-        <td>
-            <asp:TextBox ID="txtinfname" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Name:</td>
-        <td>
-            <asp:TextBox ID="txtname" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Place of birth:</td>
-        <td>
-            <asp:TextBox ID="txtplaceofbirth" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Informer Address:</td>
-        <td>
-            <asp:TextBox ID="txtinfadd" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Birth Date:</td>
-        <td>
-            <asp:TextBox ID="txtbirthdte" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Father Name:</td>
-        <td>
-            <asp:TextBox ID="txtfathernme" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Age of Mother at<br />
-            wedding:</td>
-        <td>
-            <asp:TextBox ID="txtageofmatwed" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td class="style4">
-            Gender:</td>
-        <td class="style4">
-            <asp:RadioButton ID="rdmale" runat="server" Text="Male" />
-            <asp:RadioButton ID="rdfemale" runat="server" Text="Female" />
-            <asp:RadioButton ID="rdother" runat="server" Text="Other" />
-        </td>
-        <td class="style4">
-            Father Qualification:</td>
-        <td class="style4">
-            <asp:TextBox ID="txtfqualification" runat="server"></asp:TextBox>
-        </td>
-        <td class="style4">
-            Delivery Type:</td>
-        <td class="style4">
-            <asp:DropDownList ID="drbdeliverytype" runat="server">
-                <asp:ListItem>Normal</asp:ListItem>
-                <asp:ListItem>Sizure</asp:ListItem>
-            </asp:DropDownList>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Permanent<br />
-            Address:</td>
-        <td>
-            <asp:TextBox ID="txtprmadd" runat="server" TextMode="MultiLine"></asp:TextBox>
-        </td>
-        <td>
-            Father Occupation:</td>
-        <td>
-            <asp:TextBox ID="txtfoccupation" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Age of mother when<br />
-            baby born:</td>
-        <td>
-            <asp:TextBox ID="txtageofmatbborn" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Village/City:</td>
-        <td>
-            <asp:TextBox ID="txtvillage" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Mother Name:</td>
-        <td>
-            <asp:TextBox ID="txtmname" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Pregnancy period in<br />
-            weeks:</td>
-        <td>
-            <asp:TextBox ID="txtpregperinweek" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Taluka:</td>
-        <td>
-            <asp:TextBox ID="txttaluka" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            Mother Qualification:</td>
-        <td>
-            <asp:TextBox ID="txtmqualification" runat="server"></asp:TextBox>
-        </td>
-        <td>
-            No. of children born in the Mother womb:</td>
-        <td>
-            <asp:TextBox ID="txtnoofchbrmwo" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            District:</td>
-        <td>
-            <asp:DropDownList ID="drbdistrict" runat="server">
-                <asp:ListItem>Sangli</asp:ListItem>
-                <asp:ListItem>Kolhapur</asp:ListItem>
-                <asp:ListItem>Satara</asp:ListItem>
-                <asp:ListItem>Pune</asp:ListItem>
-            </asp:DropDownList>
-        </td>
-        <td>
-            Religion:</td>
-        <td>
-            <asp:DropDownList ID="drbreligion" runat="server">
-                <asp:ListItem>Hindu</asp:ListItem>
-                <asp:ListItem>Critian</asp:ListItem>
-                <asp:ListItem>Buddhis</asp:ListItem>
-                <asp:ListItem>Muslim</asp:ListItem>
-            </asp:DropDownList>
-        </td>
-        <td>
-            Baby weight on Birth:</td>
-        <td>
-            <asp:TextBox ID="txtbwonbirth" runat="server"></asp:TextBox>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            State:</td>
-        <td>
-            <asp:DropDownList ID="drbstate" runat="server">
-                <asp:ListItem>Maharashtra</asp:ListItem>
-                <asp:ListItem>Karnataka</asp:ListItem>
-            </asp:DropDownList>
-        </td>
-        <td>
-            <strong>Documents:</strong></td>
-        <td>
-            <asp:Label ID="lblupadharcard" runat="server" BorderStyle="Ridge"></asp:Label>
-        </td>
-        <td>
-            <asp:FileUpload ID="FileUpload1" runat="server" />
-        </td>
-        <td>
-            <asp:Button ID="btnupadharcard" runat="server" Height="35px" 
-                onclick="btnupadharcard_Click" Text="Upload Adhar Card" Width="200px" 
-                style="color: #FFFFFF; background-color: #000066" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-        <td>
-            <asp:Label ID="lblupbirthcard" runat="server" BorderStyle="Ridge"></asp:Label>
-        </td>
-        <td>
-            <asp:FileUpload ID="FileUpload2" runat="server" />
-        </td>
-        <td>
-            <asp:Button ID="btnuploadbicard" runat="server" Height="35px" 
-                onclick="btnuploadbicard_Click" Text="Upload Birth Card" Width="200px" 
-                style="color: #FFFFFF; background-color: #000066" />
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <asp:Button ID="btnsavenext" runat="server" Height="35px" 
-                onclick="btnsavenext_Click" Text="Save &amp; Next" Width="200px" 
-                style="color: #FFFFFF; background-color: #000066" />
-        </td>
-        <td>
-            &nbsp;<asp:Button ID="btncancel" runat="server" Height="35px" Text="Cancel" 
-                Width="200px" style="color: #FFFFFF; background-color: #000066" />
-        </td>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-        <td>
-            &nbsp;</td>
-    </tr>
-</table>
+<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    <div class="form-card" style="max-width: 960px; margin: 30px auto;">
+        <asp:Panel ID="Panel1" runat="server" CssClass="form-header" style="background: linear-gradient(135deg, #0f2942 0%, #1b365d 100%); color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 24px;">
+            <h2 style="color: #ffffff; margin: 0;">Application Form for Birth Certificate</h2>
+            <p style="color: #cbd5e1; margin: 4px 0 0 0; font-size: 0.9rem;">Register birth details, parent information, and medical statistics</p>
+        </asp:Panel>
+
+        <!-- General Info -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 16px;">1. General Registration Details</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Birth Registration ID:</label>
+                <asp:TextBox ID="txtbirthregid" runat="server" CssClass="form-control" placeholder="Registration ID"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Date of Registration:</label>
+                <asp:TextBox ID="txtdteofreg" runat="server" CssClass="form-control" placeholder="Date of Registration"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Child Name:</label>
+                <asp:TextBox ID="txtname" runat="server" CssClass="form-control" placeholder="Child Name"></asp:TextBox>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Birth Date:</label>
+                <asp:TextBox ID="txtbirthdte" runat="server" CssClass="form-control" placeholder="Birth Date"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Gender:</label>
+                <div style="display: flex; gap: 16px; padding: 8px 0;">
+                    <asp:RadioButton ID="rdmale" runat="server" Text=" Male" />
+                    <asp:RadioButton ID="rdfemale" runat="server" Text=" Female" />
+                    <asp:RadioButton ID="rdother" runat="server" Text=" Other" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Place of Birth:</label>
+                <asp:TextBox ID="txtplaceofbirth" runat="server" CssClass="form-control" placeholder="Hospital / Place"></asp:TextBox>
+            </div>
+        </div>
+
+        <!-- Location Details -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px;">2. Location &amp; Address</h3>
+        <div class="form-row">
+            <div class="form-group" style="flex: 2;">
+                <label class="form-label">Permanent Address:</label>
+                <asp:TextBox ID="txtprmadd" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-control" placeholder="Full Permanent Address"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Village / City:</label>
+                <asp:TextBox ID="txtvillage" runat="server" CssClass="form-control" placeholder="Village / City"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Taluka:</label>
+                <asp:TextBox ID="txttaluka" runat="server" CssClass="form-control" placeholder="Taluka"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">District:</label>
+                <asp:DropDownList ID="drbdistrict" runat="server" CssClass="form-control">
+                    <asp:ListItem>Sangli</asp:ListItem>
+                    <asp:ListItem>Kolhapur</asp:ListItem>
+                    <asp:ListItem>Satara</asp:ListItem>
+                    <asp:ListItem>Pune</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="form-group">
+                <label class="form-label">State:</label>
+                <asp:DropDownList ID="drbstate" runat="server" CssClass="form-control">
+                    <asp:ListItem>Maharashtra</asp:ListItem>
+                    <asp:ListItem>Karnataka</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <!-- Parents Details -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px;">3. Parents &amp; Informer Information</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Father Name:</label>
+                <asp:TextBox ID="txtfathernme" runat="server" CssClass="form-control" placeholder="Father Name"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Father Qualification:</label>
+                <asp:TextBox ID="txtfqualification" runat="server" CssClass="form-control" placeholder="Qualification"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Father Occupation:</label>
+                <asp:TextBox ID="txtfoccupation" runat="server" CssClass="form-control" placeholder="Occupation"></asp:TextBox>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Mother Name:</label>
+                <asp:TextBox ID="txtmname" runat="server" CssClass="form-control" placeholder="Mother Name"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Mother Qualification:</label>
+                <asp:TextBox ID="txtmqualification" runat="server" CssClass="form-control" placeholder="Qualification"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Religion:</label>
+                <asp:DropDownList ID="drbreligion" runat="server" CssClass="form-control">
+                    <asp:ListItem>Hindu</asp:ListItem>
+                    <asp:ListItem>Critian</asp:ListItem>
+                    <asp:ListItem>Buddhis</asp:ListItem>
+                    <asp:ListItem>Muslim</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Informer Name:</label>
+                <asp:TextBox ID="txtinfname" runat="server" CssClass="form-control" placeholder="Informer Name"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Informer Address:</label>
+                <asp:TextBox ID="txtinfadd" runat="server" CssClass="form-control" placeholder="Informer Address"></asp:TextBox>
+            </div>
+        </div>
+
+        <!-- Medical & Birth Stats -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px;">4. Medical &amp; Delivery Details</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Delivery Type:</label>
+                <asp:DropDownList ID="drbdeliverytype" runat="server" CssClass="form-control">
+                    <asp:ListItem>Normal</asp:ListItem>
+                    <asp:ListItem>Sizure</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Age of Mother at Wedding:</label>
+                <asp:TextBox ID="txtageofmatwed" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Age of Mother when Baby Born:</label>
+                <asp:TextBox ID="txtageofmatbborn" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Pregnancy Period (Weeks):</label>
+                <asp:TextBox ID="txtpregperinweek" runat="server" CssClass="form-control" placeholder="Weeks"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">No. of Children Born:</label>
+                <asp:TextBox ID="txtnoofchbrmwo" runat="server" CssClass="form-control" placeholder="No. of Children"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Baby Weight at Birth:</label>
+                <asp:TextBox ID="txtbwonbirth" runat="server" CssClass="form-control" placeholder="Weight (kg/lbs)"></asp:TextBox>
+            </div>
+        </div>
+
+        <!-- Upload Documents -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 24px; margin-bottom: 16px;">5. Document Uploads</h3>
+        
+        <div class="form-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 16px;">
+            <div class="form-row" style="align-items: center;">
+                <div class="form-group">
+                    <label class="form-label">Upload Aadhaar Card Proof:</label>
+                    <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Label ID="lblupadharcard" runat="server" style="font-weight: 600; color: #1d4ed8;"></asp:Label>
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Button ID="btnupadharcard" runat="server" onclick="btnupadharcard_Click" Text="Upload Aadhaar Card" CssClass="btn btn-secondary" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 24px;">
+            <div class="form-row" style="align-items: center;">
+                <div class="form-group">
+                    <label class="form-label">Upload Hospital Birth Report:</label>
+                    <asp:FileUpload ID="FileUpload2" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Label ID="lblupbirthcard" runat="server" style="font-weight: 600; color: #1d4ed8;"></asp:Label>
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Button ID="btnuploadbicard" runat="server" onclick="btnuploadbicard_Click" Text="Upload Birth Card" CssClass="btn btn-secondary" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <asp:Button ID="btnsavenext" runat="server" onclick="btnsavenext_Click" Text="Save &amp; Proceed" CssClass="btn btn-primary" style="min-width: 180px;" />
+            <asp:Button ID="btncancel" runat="server" Text="Cancel" CssClass="btn btn-secondary" style="min-width: 140px;" CausesValidation="false" />
+        </div>
+    </div>
 </asp:Content>
-
-

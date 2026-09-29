@@ -1,394 +1,203 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="MarriageCertificate.aspx.cs" Inherits="Customer_MarriageCertificate" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="MarriageCertificate.aspx.cs" Inherits="Customer_MarriageCertificate" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .style2
-        {
-            width: 90%;
-        }
-        .style3
-        {
-            font-family: "Microsoft JhengHei UI";
-            text-align: center;
-            font-size: x-large;
-        }
-        .style4
-        {
-            height: 34px;
-        }
-        .style5
-        {
-            width: 221px;
-        }
-        .style7
-        {
-            color:White;
-        }
-    </style>
 </asp:Content>
 
-<asp:Content ID="Content2" runat="server" 
-    contentplaceholderid="ContentPlaceHolder1">
-    <table align="center" cellpadding="2" class="style2">
-        <tr>
-        <td class="style3" colspan="6">
+<asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
+    <div class="form-card" style="max-width: 980px; margin: 30px auto;">
+        <asp:Panel ID="Panel1" runat="server" CssClass="form-header" style="background: linear-gradient(135deg, #0f2942 0%, #1b365d 100%); color: #ffffff; padding: 20px; border-radius: 8px; margin-bottom: 24px;">
+            <h2 style="color: #ffffff; margin: 0;">Application Form for Marriage Certificate</h2>
+            <p style="color: #cbd5e1; margin: 4px 0 0 0; font-size: 0.9rem;">Register marriage details, husband &amp; wife information, witness details, and proof documents</p>
+        </asp:Panel>
 
-            <asp:Panel ID="Panel1" runat="server" BackImageUrl="~/Image/indian-flag.jpg" 
-                style="text-align: left" >
-                <span class="style6"><strong><span class="style7">Application Form for Marriage 
-                Certificate</span> </strong></span>
-                           
-            </asp:Panel>
-            <hr />
-        </td>
-    </tr>
-        <tr>
-            <td class="style6">
-                Marriage Registration ID:</td>
-            <td>
-                <asp:TextBox ID="txtmarregid" runat="server" Height="30px" Width="150px"></asp:TextBox>
-            </td>
-            <td>
-                Registration Date:</td>
-            <td>
-                <asp:TextBox ID="txtregdate" runat="server" Height="30px" TextMode="Date" 
-                    Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style6">
-                Place of Marriage:</td>
-            <td>
-                <asp:TextBox ID="txtplacemarr" runat="server" Height="30px" Width="150px"></asp:TextBox>
-            </td>
-            <td>
-                Marriage Date:</td>
-            <td>
-                <asp:TextBox ID="txtmarrdate" runat="server" Height="30px" TextMode="Date" 
-                    Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style6">
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table class="style1">
-                    <tr>
-                        <td colspan="3">
-                            Husband&#39;s Details</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Husband Name:</td>
-                        <td>
-                            <asp:TextBox ID="txthname" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                        <td rowspan="4">
-                            <asp:Image ID="Image2" runat="server" Height="121px" Width="145px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Husband&#39;s Address:</td>
-                        <td>
-                            <asp:TextBox ID="txthadd" runat="server" Height="30px" TextMode="MultiLine" 
-                                Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Husband&#39;s Religion:</td>
-                        <td>
-                            <asp:TextBox ID="txthreligion" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style4">
-                            Father Name:</td>
-                        <td class="style4">
-                            <asp:TextBox ID="txthfname" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Husband&#39;s Age At Marriage:</td>
-                        <td>
-                            <asp:TextBox ID="txthageatmarr" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:FileUpload ID="FileUpload1" runat="server" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="style4">
-                            <asp:Label ID="lblhupadhar" runat="server" BorderStyle="Ridge" Height="30px" 
-                                Width="150px"></asp:Label>
-                        </td>
-                        <td class="style4">
-                        </td>
-                        <td class="style4">
-                            <asp:Button ID="btnupimage" runat="server" Height="30px" 
-                                onclick="btnupimage_Click" style="color: #FFFFFF; background-color: #000066" 
-                                Text="Upload Image" Width="180px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="FileUpload2" runat="server" />
-                        </td>
-                        <td>
-                            <asp:Button ID="btnupadhar" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload Adhar Card" 
-                                Width="180px" onclick="btnupadhar_Click" />
-                        </td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="style1">
-                    <tr>
-                        <td colspan="3">
-                            Wife&#39;s Details</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Wife Name:</td>
-                        <td>
-                            <asp:TextBox ID="txtwname" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                        <td rowspan="3">
-                            <asp:Image ID="Image3" runat="server" Height="121px" Width="145px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Wife&#39;s Address:</td>
-                        <td>
-                            <asp:TextBox ID="txtwadd" runat="server" Height="30px" TextMode="MultiLine" 
-                                Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Wife&#39;s Religion:</td>
-                        <td>
-                            <asp:TextBox ID="txtwreligion" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Father Name:</td>
-                        <td>
-                            <asp:TextBox ID="txtwfname" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:FileUpload ID="FileUpload4" runat="server" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Wife&#39;s Age At Marriage:</td>
-                        <td>
-                            <asp:TextBox ID="txtwageatmarr" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                        <td>
-                            <asp:Button ID="btnupwimage" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload Image" 
-                                Width="180px" onclick="btnupwimage_Click" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblwupadhar" runat="server" BorderStyle="Ridge" Height="30px" 
-                                Width="150px"></asp:Label>
-                        </td>
-                        <td>
-                            &nbsp;</td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="FileUpload3" runat="server" />
-                        </td>
-                        <td>
-                            <asp:Button ID="btnupwadhar" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload Adhar Card" 
-                                Width="180px" onclick="btnupwadhar_Click" />
-                        </td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td class="style6">
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                Witness Details</td>
-        </tr>
-        <tr>
-            <td colspan="2">
-                <table class="style1">
-                    <tr>
-                        <td class="style5" rowspan="3">
-                            <asp:Image ID="Image4" runat="server" Height="121px" Width="145px" />
-                        </td>
-                        <td>
-                            Name:</td>
-                        <td>
-                            <asp:TextBox ID="txtw1name" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Address:</td>
-                        <td>
-                            <asp:TextBox ID="txtw1add" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;</td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="style5">
-                            <asp:FileUpload ID="FileUpload5" runat="server" />
-                        </td>
-                        <td colspan="2">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="style5">
-                            <asp:Button ID="btnupw1" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload" 
-                                Width="150px" onclick="btnupw1_Click" />
-                        </td>
-                        <td colspan="2">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td class="style5">
-                            <asp:Label ID="lblupw1adhar" runat="server" BorderStyle="Ridge"></asp:Label>
-                            <asp:FileUpload ID="FileUpload6" runat="server" />
-                        </td>
-                        <td colspan="2">
-                            <asp:Button ID="btnupw1adhar" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload Adhar Card" 
-                                Width="180px" onclick="btnupw1adhar_Click" />
-                        </td>
-                    </tr>
-                </table>
-            </td>
-            <td colspan="2">
-                <table class="style1">
-                    <tr>
-                        <td rowspan="3">
-                            <asp:Image ID="Image5" runat="server" Height="121px" Width="145px" />
-                        </td>
-                        <td>
-                            Name:</td>
-                        <td>
-                            <asp:TextBox ID="txtw2name" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Address:</td>
-                        <td>
-                            <asp:TextBox ID="txtw2add" runat="server" Height="30px" Width="150px"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            &nbsp;</td>
-                        <td>
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:FileUpload ID="FileUpload7" runat="server" />
-                        </td>
-                        <td colspan="2">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Button ID="btnupw2" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload" 
-                                Width="180px" onclick="btnupw2_Click" />
-                        </td>
-                        <td colspan="2">
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:Label ID="lblupw2adhar" runat="server" BorderStyle="Ridge"></asp:Label>
-                            <asp:FileUpload ID="FileUpload8" runat="server" />
-                        </td>
-                        <td colspan="2">
-                            <asp:Button ID="btnupw2adhar" runat="server" Height="30px" 
-                                style="color: #FFFFFF; background-color: #000066" Text="Upload Adhar Card" 
-                                Width="180px" onclick="btnupw2adhar_Click" />
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td class="style6">
-                <asp:Label ID="lblupid" runat="server" BorderStyle="Ridge" Height="30px" 
-                    Width="150px"></asp:Label>
-            </td>
-            <td>
-                <asp:FileUpload ID="FileUpload9" runat="server" />
-            </td>
-            <td>
-                <asp:Button ID="btnupid" runat="server" Height="30px" 
-                    style="color: #FFFFFF; margin-left: 0px; background-color: #000066" 
-                    Text="Upload" Width="180px" onclick="btnupid_Click" />
-            </td>
-            <td>
-                &nbsp;</td>
-        </tr>
-        <tr>
-            <td class="style6" colspan="2">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnsavenext" runat="server" Height="30px" 
-                    onclick="btnsavenext_Click" style="color: #FFFFFF; background-color: #000066" 
-                    Text="Save &amp; Next" Width="180px" />
-            </td>
-            <td>
-                <asp:Button ID="btncancel" runat="server" Height="30px" 
-                    style="color: #FFFFFF; background-color: #000066" Text="Cancel" 
-                    Width="180px" onclick="btncancel_Click" />
-            </td>
-            <td>
-                &nbsp;</td>
-        </tr>
-    </table>
+        <!-- General Registration Info -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-bottom: 16px;">1. General Marriage Registration Details</h3>
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Marriage Registration ID:</label>
+                <asp:TextBox ID="txtmarregid" runat="server" CssClass="form-control" placeholder="Registration ID"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Registration Date:</label>
+                <asp:TextBox ID="txtregdate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label class="form-label">Place of Marriage:</label>
+                <asp:TextBox ID="txtplacemarr" runat="server" CssClass="form-control" placeholder="Marriage Place / City"></asp:TextBox>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Marriage Date:</label>
+                <asp:TextBox ID="txtmarrdate" runat="server" TextMode="Date" CssClass="form-control"></asp:TextBox>
+            </div>
+        </div>
+
+        <!-- Couple Details Section (Husband & Wife) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 24px;">
+            <!-- Husband Details Card -->
+            <div class="form-card" style="margin: 0; background: #fafafa; border: 1px solid #e2e8f0; padding: 20px;">
+                <h3 style="color: #0f2942; border-bottom: 2px solid #1d4ed8; padding-bottom: 6px; margin-top: 0; margin-bottom: 16px;">Husband's Details</h3>
+                
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Husband Name:</label>
+                    <asp:TextBox ID="txthname" runat="server" CssClass="form-control" placeholder="Full Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Husband Address:</label>
+                    <asp:TextBox ID="txthadd" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Husband Religion:</label>
+                    <asp:TextBox ID="txthreligion" runat="server" CssClass="form-control" placeholder="Religion"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Father Name:</label>
+                    <asp:TextBox ID="txthfname" runat="server" CssClass="form-control" placeholder="Father Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label class="form-label">Age at Marriage:</label>
+                    <asp:TextBox ID="txthageatmarr" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
+                </div>
+
+                <div style="text-align: center; margin-bottom: 12px;">
+                    <asp:Image ID="Image2" runat="server" Height="100px" Width="100px" style="object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" />
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Upload Photo:</label>
+                    <asp:FileUpload ID="FileUpload1" runat="server" CssClass="form-control" />
+                    <asp:Button ID="btnupimage" runat="server" onclick="btnupimage_Click" Text="Upload Image" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Aadhaar Card:</label>
+                    <asp:FileUpload ID="FileUpload2" runat="server" CssClass="form-control" />
+                    <asp:Label ID="lblhupadhar" runat="server" style="font-size: 0.85rem; color: #1d4ed8; font-weight: 600; margin-top: 4px; display: block;"></asp:Label>
+                    <asp:Button ID="btnupadhar" runat="server" onclick="btnupadhar_Click" Text="Upload Aadhaar Card" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+            </div>
+
+            <!-- Wife Details Card -->
+            <div class="form-card" style="margin: 0; background: #fafafa; border: 1px solid #e2e8f0; padding: 20px;">
+                <h3 style="color: #0f2942; border-bottom: 2px solid #1d4ed8; padding-bottom: 6px; margin-top: 0; margin-bottom: 16px;">Wife's Details</h3>
+                
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Wife Name:</label>
+                    <asp:TextBox ID="txtwname" runat="server" CssClass="form-control" placeholder="Full Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Wife Address:</label>
+                    <asp:TextBox ID="txtwadd" runat="server" TextMode="MultiLine" Rows="2" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Wife Religion:</label>
+                    <asp:TextBox ID="txtwreligion" runat="server" CssClass="form-control" placeholder="Religion"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Father Name:</label>
+                    <asp:TextBox ID="txtwfname" runat="server" CssClass="form-control" placeholder="Father Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 16px;">
+                    <label class="form-label">Age at Marriage:</label>
+                    <asp:TextBox ID="txtwageatmarr" runat="server" CssClass="form-control" placeholder="Age"></asp:TextBox>
+                </div>
+
+                <div style="text-align: center; margin-bottom: 12px;">
+                    <asp:Image ID="Image3" runat="server" Height="100px" Width="100px" style="object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" />
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Upload Photo:</label>
+                    <asp:FileUpload ID="FileUpload4" runat="server" CssClass="form-control" />
+                    <asp:Button ID="btnupwimage" runat="server" onclick="btnupwimage_Click" Text="Upload Image" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Aadhaar Card:</label>
+                    <asp:FileUpload ID="FileUpload3" runat="server" CssClass="form-control" />
+                    <asp:Label ID="lblwupadhar" runat="server" style="font-size: 0.85rem; color: #1d4ed8; font-weight: 600; margin-top: 4px; display: block;"></asp:Label>
+                    <asp:Button ID="btnupwadhar" runat="server" onclick="btnupwadhar_Click" Text="Upload Aadhaar Card" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Witnesses Section -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 32px; margin-bottom: 16px;">3. Witness Details</h3>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+            <!-- Witness 1 Card -->
+            <div class="form-card" style="margin: 0; background: #fafafa; border: 1px solid #e2e8f0; padding: 20px;">
+                <h4 style="color: #0f2942; margin-top: 0; margin-bottom: 12px;">Witness 1</h4>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Name:</label>
+                    <asp:TextBox ID="txtw1name" runat="server" CssClass="form-control" placeholder="Witness 1 Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Address:</label>
+                    <asp:TextBox ID="txtw1add" runat="server" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                </div>
+                <div style="text-align: center; margin-bottom: 12px;">
+                    <asp:Image ID="Image4" runat="server" Height="80px" Width="80px" style="object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" />
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Upload Photo:</label>
+                    <asp:FileUpload ID="FileUpload5" runat="server" CssClass="form-control" />
+                    <asp:Button ID="btnupw1" runat="server" onclick="btnupw1_Click" Text="Upload Photo" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Aadhaar Card:</label>
+                    <asp:FileUpload ID="FileUpload6" runat="server" CssClass="form-control" />
+                    <asp:Label ID="lblupw1adhar" runat="server" style="font-size: 0.85rem; color: #1d4ed8; font-weight: 600; margin-top: 4px; display: block;"></asp:Label>
+                    <asp:Button ID="btnupw1adhar" runat="server" onclick="btnupw1adhar_Click" Text="Upload Aadhaar Card" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+            </div>
+
+            <!-- Witness 2 Card -->
+            <div class="form-card" style="margin: 0; background: #fafafa; border: 1px solid #e2e8f0; padding: 20px;">
+                <h4 style="color: #0f2942; margin-top: 0; margin-bottom: 12px;">Witness 2</h4>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Name:</label>
+                    <asp:TextBox ID="txtw2name" runat="server" CssClass="form-control" placeholder="Witness 2 Name"></asp:TextBox>
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Address:</label>
+                    <asp:TextBox ID="txtw2add" runat="server" CssClass="form-control" placeholder="Address"></asp:TextBox>
+                </div>
+                <div style="text-align: center; margin-bottom: 12px;">
+                    <asp:Image ID="Image5" runat="server" Height="80px" Width="80px" style="object-fit: cover; border-radius: 6px; border: 1px solid #cbd5e1; background: white;" />
+                </div>
+                <div class="form-group" style="margin-bottom: 12px;">
+                    <label class="form-label">Upload Photo:</label>
+                    <asp:FileUpload ID="FileUpload7" runat="server" CssClass="form-control" />
+                    <asp:Button ID="btnupw2" runat="server" onclick="btnupw2_Click" Text="Upload Photo" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Aadhaar Card:</label>
+                    <asp:FileUpload ID="FileUpload8" runat="server" CssClass="form-control" />
+                    <asp:Label ID="lblupw2adhar" runat="server" style="font-size: 0.85rem; color: #1d4ed8; font-weight: 600; margin-top: 4px; display: block;"></asp:Label>
+                    <asp:Button ID="btnupw2adhar" runat="server" onclick="btnupw2adhar_Click" Text="Upload Aadhaar Card" CssClass="btn btn-secondary" style="width: 100%; margin-top: 6px;" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Proof Upload Section -->
+        <h3 style="color: #0f2942; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px; margin-top: 32px; margin-bottom: 16px;">4. Marriage Invitation / Legal Proof</h3>
+        <div class="form-card" style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; margin-bottom: 24px;">
+            <div class="form-row" style="align-items: center;">
+                <div class="form-group">
+                    <label class="form-label">Upload Marriage Proof Document:</label>
+                    <asp:FileUpload ID="FileUpload9" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Label ID="lblupid" runat="server" style="font-weight: 600; color: #1d4ed8;"></asp:Label>
+                </div>
+                <div class="form-group" style="flex: 0 0 auto;">
+                    <asp:Button ID="btnupid" runat="server" onclick="btnupid_Click" Text="Upload Document" CssClass="btn btn-secondary" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-actions">
+            <asp:Button ID="btnsavenext" runat="server" onclick="btnsavenext_Click" Text="Save &amp; Proceed" CssClass="btn btn-primary" style="min-width: 180px;" />
+            <asp:Button ID="btncancel" runat="server" onclick="btncancel_Click" Text="Cancel" CssClass="btn btn-secondary" style="min-width: 140px;" CausesValidation="false" />
+        </div>
+    </div>
 </asp:Content>
-
-
-

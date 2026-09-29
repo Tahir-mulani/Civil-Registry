@@ -1,41 +1,27 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="PancardReport.aspx.cs" Inherits="Customer_PancardReport" %>
-
+<%@ Page Title="" Language="C#" MasterPageFile="~/Customer/Customer.master" AutoEventWireup="true" CodeFile="PancardReport.aspx.cs" Inherits="Customer_PancardReport" %>
 <%@ Register assembly="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
- 
-        .style4
-        {
-            text-align: center;
-            
-        }
-      
-    </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="style1" style="margin-bottom: 0px">
-    <tr>
-        <td class="style4">
-            <asp:Label ID="lblstatus" runat="server" ForeColor="Red">Approval Pending</asp:Label>
-            <br />
-            <asp:Label ID="lblanapp" runat="server" ForeColor="Red" Text="Not Applied"></asp:Label>
-        </td>
-    </tr>
-    <tr>
-        <td class="style2">
-            <asp:Button ID="btngenerate" runat="server" Height="35px" 
-                onclick="btngenerate_Click" Text="Generate Certificate" Width="180px" 
-                style="color: #FFFFFF; background-color: #003366" />
-        </td>
-    </tr>
-    <tr>
-        <td class="style5">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<CR:CrystalReportViewer ID="CrystalReportViewer1" 
-                runat="server" AutoDataBind="true" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </td>
-    </tr>
-</table>
 </asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="content-card" style="max-width: 900px; margin: 30px auto; text-align: center;">
+        <div class="form-header">
+            <h2>PAN Card Status &amp; Report</h2>
+            <p style="color: #64748b; margin-top: 4px;">Track application status and download official digital PAN card</p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <asp:Label ID="lblstatus" runat="server" style="font-size: 1.1rem; font-weight: 700; color: #d97706; display: block; margin-bottom: 6px;">Approval Pending</asp:Label>
+            <asp:Label ID="lblanapp" runat="server" style="font-size: 1rem; font-weight: 600; color: #ef4444; display: block;" Text="Not Applied"></asp:Label>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+            <asp:Button ID="btngenerate" runat="server" onclick="btngenerate_Click" Text="Generate Certificate" CssClass="btn btn-primary" style="min-width: 200px;" />
+        </div>
+
+        <div class="table-responsive" style="margin-top: 24px; text-align: center;">
+            <CR:CrystalReportViewer ID="CrystalReportViewer1" runat="server" AutoDataBind="true" />
+        </div>
+    </div>
+</asp:Content>

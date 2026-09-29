@@ -1,78 +1,38 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="enquiry.aspx.cs" Inherits="User_enquiry" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/User/User.master" AutoEventWireup="true" CodeFile="enquiry.aspx.cs" Inherits="User_enquiry" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .style6
-        {
-            font-size: x-large;
-            text-align: center;
-        }
-        .style7
-        {
-            height: 34px;
-        }
-        .style2
-        {
-            width: 701px;
-        }
-        .style8
-        {
-            width: 412px;
-        }
-        .style9
-        {
-            height: 34px;
-            width: 412px;
-        }
-    </style>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center" class="style2" width="100%">
-        <tr>
-            <td class="style6" colspan="2">
-                <strong>Enquiry Form</strong></td>
-        </tr>
-        <tr>
-            <td class="style8">
-                Name:</td>
-            <td>
-                <asp:TextBox ID="txtname" runat="server" Height="30px" Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style8">
-                Email:</td>
-            <td>
-                <asp:TextBox ID="txtemail" runat="server" Height="30px" Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style9">
-                Subject:</td>
-            <td class="style7">
-                <asp:TextBox ID="txtsubject" runat="server" Height="30px" Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style8">
-                Message:</td>
-            <td>
-                <asp:TextBox ID="txtmsg" runat="server" Height="30px" TextMode="MultiLine" 
-                    Width="150px"></asp:TextBox>
-            </td>
-        </tr>
-        <tr>
-            <td class="style8">
-                <asp:Button ID="btnsubmit" runat="server" Height="30px" 
-                    onclick="btnsubmit_Click" style="color: #FFFFFF; background-color: #000066" 
-                    Text="Submit" Width="180px" />
-            </td>
-            <td>
-                <asp:Button ID="btnreset" runat="server" Height="30px" Text="Reset" 
-                    Width="150px" style="color: #FFFFFF; background-color: #000066" 
-                    onclick="btnreset_Click1" />
-            </td>
-        </tr>
-    </table>
 </asp:Content>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="form-card" style="max-width: 680px;">
+        <div class="form-header">
+            <h2>Contact &amp; Enquiry Helpdesk</h2>
+            <p style="color: #64748b; margin-top: 4px;">Have questions regarding document applications? Send us a message.</p>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Full Name:</label>
+            <asp:TextBox ID="txtname" runat="server" CssClass="form-control" placeholder="Enter Full Name"></asp:TextBox>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Email Address:</label>
+            <asp:TextBox ID="txtemail" runat="server" CssClass="form-control" placeholder="name@example.com"></asp:TextBox>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Subject:</label>
+            <asp:TextBox ID="txtsubject" runat="server" CssClass="form-control" placeholder="Enquiry Subject"></asp:TextBox>
+        </div>
+
+        <div class="form-group" style="margin-bottom: 24px;">
+            <label class="form-label">Message / Details:</label>
+            <asp:TextBox ID="txtmsg" runat="server" TextMode="MultiLine" Rows="4" CssClass="form-control" placeholder="Type your query or enquiry details here..."></asp:TextBox>
+        </div>
+
+        <div class="form-actions">
+            <asp:Button ID="btnsubmit" runat="server" onclick="btnsubmit_Click" Text="Submit Enquiry" CssClass="btn btn-primary" style="min-width: 160px;" />
+            <asp:Button ID="btnreset" runat="server" Text="Reset Form" CssClass="btn btn-secondary" style="min-width: 140px;" onclick="btnreset_Click1" CausesValidation="false" />
+        </div>
+    </div>
+</asp:Content>

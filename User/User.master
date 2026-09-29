@@ -1,119 +1,95 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User_User" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User_User" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<title>Bootstrap slider</title>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Made with WOW Slider - Create beautiful, responsive image sliders in a few clicks. Awesome skins and animations. Bootstrap slider" />
-	
-	
-	<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
-	<script type="text/javascript" src="../engine1/jquery.js"></script>
-	
-
-	
+    <title>Civil Registry Management System</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="../engine1/style.css" />
+    <script type="text/javascript" src="../engine1/jquery.js"></script>
+    <link href="../css/style.css" rel="stylesheet" />
+    
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-
-        .style1
-        {
-            width: 100%;
-        }
-        .style4
-        {
-            text-align: left;
-        }
-    </style>
-    <link href="../css/style.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-    <table align="center" cellpadding="0" cellspacing="0" class="style1" 
-        style="font-family: 'Microsoft JhengHei';">
-        <tr>
-            <td class="style3" style="font-family: Algerian; font-size: xx-large">
-                <asp:Image ID="Image5" runat="server" Height="90px" 
-                    ImageUrl="~/Image/TAHIR (1).jpg" Width="400px" />
-            </td>
-            <td style="font-family: 'Microsoft JhengHei'; font-size: xx-large">
-                &nbsp;</td>
-            <td style="font-family: Algerian; font-size: xx-large">
-                &nbsp;</td>
-            <td align="right" style="font-family: Algerian; font-size: medium">
-                <table align="right" cellpadding="5">
-                    <tr>
-                        <td>
-                            <asp:Image ID="Image4" runat="server" Height="30px" 
-                                ImageUrl="~/Image/usericon.png" />
-                        </td>
-                        <td>
-                            <asp:HyperLink ID="HyperLink1" runat="server" ForeColor="Black" 
-                                NavigateUrl="~/User/Customerlogin.aspx" 
-                                style="font-family: 'Microsoft JhengHei'; font-weight: 700">Sign In </asp:HyperLink>
-                        </td>
-                        <td align="right">
-                            &nbsp;</td>
-                        <td style="font-weight: 700">
-                            /</td>
-                        <td>
-                            <asp:HyperLink ID="HyperLink2" runat="server" ForeColor="Black" 
-                                NavigateUrl="~/user/Registrationform.aspx" 
-                                style="font-family: 'Microsoft JhengHei'; font-weight: 700">Sign Up</asp:HyperLink>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr>
-            <td class="style4" colspan="4">
-                <asp:Menu ID="Menu1" runat="server" BackColor="Fuchsia" ForeColor="White" 
-                    Height="40px" Orientation="Horizontal" RenderingMode="Table" 
-                    style="text-align: center; font-weight: 700; background-color: #800000;" 
-                    Width="100%">
-                    <DynamicHoverStyle BackColor="Red" />
-                    <DynamicMenuItemStyle BackColor="#003366" ForeColor="White" />
-                    <DynamicMenuStyle BackColor="#003366" HorizontalPadding="10px" 
-                        VerticalPadding="10px" />
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/User/Home.aspx" Text="Home" Value="Home">
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/User/aboutus.aspx" Text="About Us" 
-                            Value="About Us"></asp:MenuItem>
-                        <asp:MenuItem Text="Forms" Value="Forms">
-                            <asp:MenuItem NavigateUrl="~/User/Registrationofbirth.aspx" 
-                                Text="Birth Certificate" Value="birth Certificate"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/User/Registrationdeath.aspx" 
-                                Text="Death Certificate" Value="Death Certificate"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/User/Marriagecertificate.aspx" 
-                                Text="Marriage Certificate" Value="Marriage Certificate"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/User/Panregestration.aspx" Text="Pan Card" 
-                                Value="Pan Card"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/User/Adharcardregestration.aspx" 
-                                Text="Aadhar Card" Value="Aadhar Card"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/User/Voteridcard.aspx" Text="Voter ID" 
-                                Value="Voter ID"></asp:MenuItem>
-                        </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/user/enquiry.aspx" Text="Contact" Value="Contact">
-                        </asp:MenuItem>
-                    </Items>
-                </asp:Menu>
-            </td>
-        </tr>
-        <tr>
-            <td class="style4" colspan="4">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </td>
-        </tr>
-        <tr>
-            <td class="style4" colspan="4">
-                <marquee style="color: #FFFFFF; background-color: #800000; height:30px; ">PROJECT BY MUSKAN & TAHIR</marquee></td>
-        </tr>
-    </table>
+    
+    <!-- Modern Header -->
+    <header class="civic-header">
+        <div class="civic-header-inner">
+            <div class="civic-logo-box">
+                <asp:Image ID="Image5" runat="server" Height="60px" 
+                    ImageUrl="~/Image/TAHIR (1).jpg" Width="240px" style="object-fit: contain; border-radius: 6px; background: #ffffff; padding: 4px;" />
+                <div>
+                    <h1 class="civic-title">Civil Registry Portal</h1>
+                    <p class="civic-subtitle">Government Document &amp; Registration Services</p>
+                </div>
+            </div>
+            <div class="civic-auth-links">
+                <asp:Image ID="Image4" runat="server" Height="24px" 
+                    ImageUrl="~/Image/usericon.png" style="vertical-align: middle;" />
+                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="civic-auth-link" 
+                    NavigateUrl="~/User/Customerlogin.aspx">Sign In</asp:HyperLink>
+                <span style="color: #94a3b8; font-weight: bold;">/</span>
+                <asp:HyperLink ID="HyperLink2" runat="server" CssClass="civic-auth-link" 
+                    NavigateUrl="~/user/Registrationform.aspx">Sign Up</asp:HyperLink>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <div class="civic-nav-bar">
+        <div class="civic-nav-container">
+            <asp:Menu ID="Menu1" runat="server" ForeColor="White" 
+                Orientation="Horizontal" RenderingMode="Table" 
+                style="text-align: center; width: 100%;">
+                <StaticMenuItemStyle HorizontalPadding="20px" VerticalPadding="14px" ForeColor="White" Font-Bold="true" />
+                <StaticHoverStyle BackColor="#1d4ed8" ForeColor="White" />
+                <DynamicMenuItemStyle BackColor="#0b1f33" ForeColor="White" HorizontalPadding="18px" VerticalPadding="12px" Font-Bold="true" />
+                <DynamicHoverStyle BackColor="#1d4ed8" ForeColor="White" />
+                <DynamicMenuStyle BackColor="#0b1f33" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/User/Home.aspx" Text="Home" Value="Home">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/User/aboutus.aspx" Text="About Us" 
+                        Value="About Us"></asp:MenuItem>
+                    <asp:MenuItem Text="Forms" Value="Forms">
+                        <asp:MenuItem NavigateUrl="~/User/Registrationofbirth.aspx" 
+                            Text="Birth Certificate" Value="birth Certificate"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/User/Registrationdeath.aspx" 
+                            Text="Death Certificate" Value="Death Certificate"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/User/Marriagecertificate.aspx" 
+                            Text="Marriage Certificate" Value="Marriage Certificate"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/User/Panregestration.aspx" Text="Pan Card" 
+                            Value="Pan Card"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/User/Adharcardregestration.aspx" 
+                            Text="Aadhar Card" Value="Aadhar Card"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/User/Voteridcard.aspx" Text="Voter ID" 
+                            Value="Voter ID"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/user/enquiry.aspx" Text="Contact" Value="Contact">
+                    </asp:MenuItem>
+                </Items>
+            </asp:Menu>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="page-container">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </main>
+
+    <!-- Modern Footer -->
+    <footer class="civic-footer">
+        <p><strong>Civil Registry Management System</strong> &bull; Official Citizen Portal</p>
+        <p style="font-size: 0.82rem; opacity: 0.8;">PROJECT BY MUSKAN &amp; TAHIR</p>
+    </footer>
+
     </form>
 </body>
 </html>
